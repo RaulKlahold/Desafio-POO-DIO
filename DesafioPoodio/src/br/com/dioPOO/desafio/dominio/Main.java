@@ -51,6 +51,7 @@ public class Main {
 		System.out.println("Conteudos inscritos Klahold: "+devKlahold.getConteudosInscridos());
 		devKlahold.progredir();
 		devKlahold.progredir();
+		devKlahold.progredir();
 		System.out.println("-");
 		System.out.println("Conteudos inscritos Klahold: "+devKlahold.getConteudosInscridos());
 		System.out.println("Conteudos concluidos Klahold: "+devKlahold.getConteudosConcluidos());
