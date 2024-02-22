@@ -7,7 +7,9 @@ public abstract class Conteudo {
 	private String titulo;
 	private String descricao;
 	
+	
 	public abstract double calcularXp();
+	
 
 	public String getTitulo() {
 		return titulo;
@@ -25,8 +27,6 @@ public abstract class Conteudo {
 		this.descricao = descricao;
 	}
 
-	public static double getXppadrao() {
-		return XPpadrao;
-	}
+
 
 }
