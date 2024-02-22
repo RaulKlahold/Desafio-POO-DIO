@@ -30,7 +30,14 @@ public class Main {
 		bootcamp.getConteudos().add(curso1);
 		bootcamp.getConteudos().add(curso2);
 		bootcamp.getConteudos().add(mentoria);
+		
+		Dev devRaul = new Dev();
+		devRaul.setNome("Raul");
+		System.out.println("Conteudos inscritos Raul: "+devRaul.getConteudosInscridos());
 
+		Dev devKlahold = new Dev();
+		devKlahold.setNome("Klahold");
+		System.out.println("Conteudos inscritos Klahold: "+devKlahold.getConteudosInscridos());
 	}
 
 }
