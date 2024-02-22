@@ -5,18 +5,18 @@ import java.util.Objects;
 import java.util.Set;
 
 public class Dev {
-     private String nome;
-     private Set<Conteudo> conteudosInseridos = new LinkedHashSet<>();
-     private Set<Conteudo> conteudosConcluidos = new LinkedHashSet<>();
-     
-     
-    public void inscreverBootcamp(Bootcamp bootcamp) {}
-    
-    public void progredir() {}
-    
-    public void calcularTotalXp() {}
-    
-    
+	private String nome;
+	private Set<Conteudo> conteudosInseridos = new LinkedHashSet<>();
+	private Set<Conteudo> conteudosConcluidos = new LinkedHashSet<>();
+
+	public void inscreverBootcamp(Bootcamp bootcamp) {
+	}
+
+	public void progredir() {
+	}
+
+	public void calcularTotalXp() {
+	}
 
 	public String getNome() {
 		return nome;
@@ -59,7 +59,5 @@ public class Dev {
 		return Objects.equals(conteudosConcluidos, other.conteudosConcluidos)
 				&& Objects.equals(conteudosInseridos, other.conteudosInseridos) && Objects.equals(nome, other.nome);
 	}
-    
-	
-    
+
 }

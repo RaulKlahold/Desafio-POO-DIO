@@ -1,15 +1,13 @@
 package br.com.dioPOO.desafio.dominio;
 
 public abstract class Conteudo {
-	
+
 	protected static final double XPpadrao = 10d;
-	
+
 	private String titulo;
 	private String descricao;
-	
-	
+
 	public abstract double calcularXp();
-	
 
 	public String getTitulo() {
 		return titulo;
@@ -26,7 +24,5 @@ public abstract class Conteudo {
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
-
-
 
 }
