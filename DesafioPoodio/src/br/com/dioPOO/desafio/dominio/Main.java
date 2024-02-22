@@ -33,11 +33,28 @@ public class Main {
 		
 		Dev devRaul = new Dev();
 		devRaul.setNome("Raul");
+		devRaul.inscreverBootcamp(bootcamp);
 		System.out.println("Conteudos inscritos Raul: "+devRaul.getConteudosInscridos());
-
+		devRaul.progredir();
+		System.out.println("-");
+		System.out.println("Conteudos inscritos Raul: "+devRaul.getConteudosInscridos());
+		System.out.println("Conteudos concluidos Raul: "+devRaul.getConteudosConcluidos());
+		System.out.println("XP :"+devRaul.calcularTotalXp());
+		
+		
+		System.out.println("-------------");
+		
+		
 		Dev devKlahold = new Dev();
 		devKlahold.setNome("Klahold");
+		devKlahold.inscreverBootcamp(bootcamp);
 		System.out.println("Conteudos inscritos Klahold: "+devKlahold.getConteudosInscridos());
+		devKlahold.progredir();
+		devKlahold.progredir();
+		System.out.println("-");
+		System.out.println("Conteudos inscritos Klahold: "+devKlahold.getConteudosInscridos());
+		System.out.println("Conteudos concluidos Klahold: "+devKlahold.getConteudosConcluidos());
+		System.out.println("XP :"+devKlahold.calcularTotalXp());
 	}
 
 }
