@@ -1,5 +1,7 @@
 package br.com.dioPOO.desafio.dominio;
 
+import java.time.LocalDate;
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -9,13 +11,21 @@ public class Main {
 		curso1.setCargahoraria(8);
 		
 		Curso curso2 = new Curso();
-		curso2.setTitulo("Curso de Java");
-		curso2.setDescrição("Descrição curso de Java");
-		curso2.setCargahoraria(8);
+		curso2.setTitulo("Curso de Js");
+		curso2.setDescrição("Descrição curso de Js");
+		curso2.setCargahoraria(4);
+		
+		Mentoria mentoria= new Mentoria();
+		mentoria.setTitulo("mentoria de java");
+		mentoria.setDescricao("Descrição mentoria java");
+		mentoria.setData(LocalDate.now());
 		
 		
 		
-		System.out.println();
+		System.out.println(curso1);
+		System.out.println(curso2);
+		System.out.println(mentoria);
+		
 	}
 
 }
