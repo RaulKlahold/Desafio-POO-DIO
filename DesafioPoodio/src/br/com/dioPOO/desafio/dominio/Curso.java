@@ -22,5 +22,9 @@ public class Curso {
 	public void setCargahoraria(int cargahoraria) {
 		this.cargahoraria = cargahoraria;
 	}
+	@Override
+	public String toString() {
+		return "Curso [titulo=" + titulo + ", descrição=" + descrição + ", cargahoraria=" + cargahoraria + "]";
+	}
 
 }
