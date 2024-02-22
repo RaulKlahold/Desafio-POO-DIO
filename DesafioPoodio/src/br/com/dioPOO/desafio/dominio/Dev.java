@@ -2,17 +2,26 @@ package br.com.dioPOO.desafio.dominio;
 
 import java.util.LinkedHashSet;
 import java.util.Objects;
+import java.util.Optional;
 import java.util.Set;
 
 public class Dev {
 	private String nome;
-	private Set<Conteudo> conteudosInseridos = new LinkedHashSet<>();
+	private Set<Conteudo> conteudosInscridos = new LinkedHashSet<>();
 	private Set<Conteudo> conteudosConcluidos = new LinkedHashSet<>();
 
 	public void inscreverBootcamp(Bootcamp bootcamp) {
+		this.conteudosInscridos.addAll(bootcamp.getConteudos());
 	}
 
 	public void progredir() {
+		Optional<Conteudo> conteudo = this.conteudosInscridos.stream().findFirst();
+		if(conteudo.isPresent()) {
+			this.conteudosConcluidos.add(conteudo.get());
+			this.conteudosInscridos.remove(conteudo.get());
+		}else {
+			System.err.println("Você não está matriculado em nenhum conteudo!");
+		}
 	}
 
 	public void calcularTotalXp() {
@@ -26,12 +35,12 @@ public class Dev {
 		this.nome = nome;
 	}
 
-	public Set<Conteudo> getConteudosInseridos() {
-		return conteudosInseridos;
+	public Set<Conteudo> getConteudosInscridos() {
+		return conteudosInscridos;
 	}
 
-	public void setConteudosInseridos(Set<Conteudo> conteudosInseridos) {
-		this.conteudosInseridos = conteudosInseridos;
+	public void setConteudosInseridos(Set<Conteudo> conteudosInscridos) {
+		this.conteudosInscridos = conteudosInscridos;
 	}
 
 	public Set<Conteudo> getConteudosConcluidos() {
@@ -44,7 +53,7 @@ public class Dev {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(conteudosConcluidos, conteudosInseridos, nome);
+		return Objects.hash(conteudosConcluidos, conteudosInscridos, nome);
 	}
 
 	@Override
@@ -57,7 +66,7 @@ public class Dev {
 			return false;
 		Dev other = (Dev) obj;
 		return Objects.equals(conteudosConcluidos, other.conteudosConcluidos)
-				&& Objects.equals(conteudosInseridos, other.conteudosInseridos) && Objects.equals(nome, other.nome);
+				&& Objects.equals(conteudosInscridos, other.conteudosInscridos) && Objects.equals(nome, other.nome);
 	}
 
 }
